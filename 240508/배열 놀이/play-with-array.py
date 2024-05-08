@@ -1,7 +1,7 @@
 n, q = map(int, input().split())
 arr = list(map(int, input().split()))
 
-for _ in range(n):
+for _ in range(q):
     args = list(map(int, input().split()))
     if args[0] == 1:
         print(arr[args[1]-1])
