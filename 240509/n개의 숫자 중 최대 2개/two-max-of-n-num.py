@@ -1,9 +1,10 @@
+import sys
 input()
 
 n = list(map(int, input().split()))
 
-maximum = 0
-prev = 0
+maximum = -sys.maxsize
+prev = -sys.maxsize
 
 for i in n:
     if i > maximum:
