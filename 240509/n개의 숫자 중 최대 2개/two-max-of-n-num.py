@@ -8,7 +8,7 @@ prev = 0
 for i in n:
     if i > maximum:
         maximum = i
-
+n.remove(maximum)
 for i in n:
     if prev < i and i < maximum:
         prev = i
