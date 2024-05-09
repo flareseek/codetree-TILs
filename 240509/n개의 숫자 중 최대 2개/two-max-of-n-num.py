@@ -10,6 +10,6 @@ for i in n:
         maximum = i
 n.remove(maximum)
 for i in n:
-    if prev < i
+    if prev < i:
         prev = i
 print(maximum, prev)
