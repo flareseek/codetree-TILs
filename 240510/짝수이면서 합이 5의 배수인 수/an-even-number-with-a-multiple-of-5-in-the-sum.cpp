@@ -7,7 +7,7 @@ bool condition(int A) {
 		sum += A % 10;
 		A /= 10;
 	}
-	return !(A % 5);
+	return !(sum % 5);
 }
 int main(void) {
 	/*
