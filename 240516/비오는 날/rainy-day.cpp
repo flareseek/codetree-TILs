@@ -50,6 +50,9 @@ int main(void) {
       }
     }
   }
-  std::cout << info.y << "-" << (info.m < 9 ? "0" : "") << info.m << "-" << (info.d < 9 ? "0" : "") << info.d << " " << info.ds << " " << info.w;
+  std::cout << info.y << "-" << 
+  (info.m <= 9 ? "0" : "") << info.m << "-" << 
+  (info.d <= 9 ? "0" : "") << info.d << " " << 
+  info.ds << " " << info.w;
   return 0;
 }
