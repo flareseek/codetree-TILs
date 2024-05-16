@@ -31,19 +31,21 @@ int main(void) {
         info.w = w;
       }
       else if (y == info.y) {
-        if (m < info.y) {
+        if (m < info.m) {
           info.y = y;
           info.m = m;
           info.d = d;
           info.ds = ds;
           info.w = w;
         }
-        else if (m == info.y) {
-          info.y = y;
-          info.m = m;
-          info.d = d;
-          info.ds = ds;
-          info.w = w;
+        else if (m == info.m) {
+          if (d < info.d) {
+            info.y = y;
+            info.m = m;
+            info.d = d;
+            info.ds = ds;
+            info.w = w;
+          }
         }
       }
     }
