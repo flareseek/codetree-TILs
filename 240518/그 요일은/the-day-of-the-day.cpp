@@ -27,7 +27,7 @@ int main() {
     // 0 mon... 6 sun
     int cnt = (d2-d1)/7;
 
-    if ((d2-d1)%7 == d) cnt ++;
+    if ((d2-d1)%7 >= d) cnt ++;
 
     std::cout << cnt;
     
