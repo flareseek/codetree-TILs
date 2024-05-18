@@ -1,8 +1,18 @@
 #include <iostream>
 #include <string>
 
+int n1, n2;
+void func(int n) {
+    if (n >= n2) func(n/n2);
+    else {
+        std::cout << n;
+        return;
+    }
+    std::cout << n % n2;
+
+}
+
 int main(void) {
-  int n1, n2;
   std::string input;
   std::cin >> n1 >> n2 >> input;
   int size = input.size();
@@ -10,9 +20,6 @@ int main(void) {
   for (int i = 0; i < size; i++) {
     decimal = decimal * n1 + (input[i] - '0');
   }
-  while(decimal != 0) {
-    std::cout << decimal % n2;
-    decimal /= n2;
-  }
+  func(decimal);
   return 0;
 }
