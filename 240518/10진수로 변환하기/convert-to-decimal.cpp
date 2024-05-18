@@ -1,15 +1,13 @@
 #include <iostream>
+#include <string>
 
 int main() {
-    int n;
-    std::cin >> n;
-
+    std::string binary;
+    std::cin >> binary;
+    int size = binary.size();
     int result = 0;
-    int d = 1;
-    while(n != 0) {
-        result += (n%10)*d;
-        n /= 10;
-        d *= 2;
+    for (int i = 0; i < size; i++) {
+        result = result * 2 + (binary[i] - '0');
     }
     std::cout << result;
     return 0;
