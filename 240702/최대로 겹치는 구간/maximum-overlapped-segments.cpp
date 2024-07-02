@@ -8,7 +8,7 @@ int main() {
     for (int q = 0; q < n; q++) {
         int x1, x2;
         std::cin >> x1 >> x2;
-        for(int i = x1 + 100 + 1; i < x2+100; i++)
+        for(int i = x1 + 100 + 1; i <= x2+100; i++)
             lines[i] --;
     }
     std::sort(lines, lines+200);
