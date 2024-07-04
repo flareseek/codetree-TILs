@@ -28,7 +28,7 @@ int main(void) {
   int w=0, b=0, g=0;
   for (int i = 0; i < 200001; i++) {
     if (arr[i] != 0) {
-      if (white[i] + black[i] >= 4) g++;
+      if (white[i] >= 2 && black[i] >= 2) g++;
       else if (arr[i] == 1) b++;
       else w++;
     }
