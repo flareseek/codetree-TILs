@@ -24,6 +24,10 @@ int main() {
     }
     int x1, y1, x2, y2;
     std::cin >> x1 >> y1 >> x2 >> y2;
+    x1 += 1000;
+    y1 += 1000;
+    x2 += 1000;
+    y2 += 1000;
     for (int x = x1; x < x2; x++)
         for (int y = y1; y < y2; y++)
             field[x][y] = false;
