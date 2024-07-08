@@ -12,6 +12,10 @@ int main() {
         if (y1 < fy) fy = y1;
         if (lx < x2) lx = x2;
         if (ly < y2) ly = y2;
+        x1 += 1000;
+        y1 += 1000;
+        x2 += 1000;
+        y2 += 1000;
         
         for (int x = x1; x < x2; x++)
             for (int y = y1; y < y2; y++)
