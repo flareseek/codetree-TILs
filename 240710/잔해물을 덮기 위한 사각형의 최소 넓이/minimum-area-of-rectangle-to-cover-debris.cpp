@@ -15,7 +15,7 @@ int main() {
             for (int y = y1; y < y2; y++) 
                 field[x+1000][y+1000] = false;
 
-    int minX=2001, minY=2001, maxX=0, maxY = 0;
+    int minX=2001, minY=2001, maxX = 0, maxY = 0;
     for (int x = 0; x <= 2000; x++)
         for (int y = 0; y <= 2000; y++)
             if (field[x][y]) {
@@ -24,6 +24,6 @@ int main() {
                 if (x > maxX) maxX = x;
                 if (y > maxY) maxY = y;
             }
-    std::cout << (maxX+1-minX)*(maxY+1-minY);
+    std::cout << (minX==2001 ? 0 : (maxX+1-minX)*(maxY+1-minY));
     return 0;
 }
