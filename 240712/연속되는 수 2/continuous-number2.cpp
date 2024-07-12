@@ -19,7 +19,7 @@ int main() {
                 count = t_count;
                 t_count = 1;
             } else {
-                t_count = 0;
+                t_count = 1;
             }
         } else {
             t_count ++;
