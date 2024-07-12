@@ -1,5 +1,4 @@
 #include <iostream>
-#include <algorithm>
 
 int main() {
     int N;
@@ -11,15 +10,15 @@ int main() {
     for (int i = 0; i < N; i++) {
         std::cin >> arr[i];
     }
-    std::sort(arr, arr+N);
 
     last = arr[0];
-
+    count = 1;
+    t_count = 1;
     for (int i = 1; i < N; i++) {
         if (arr[i] != arr[i-1]) {
             if (t_count > count) {
                 count = t_count;
-                t_count = 0;
+                t_count = 1;
             }
         } else {
             t_count ++;
