@@ -12,13 +12,14 @@ int main() {
     }
 
     last = arr[0];
-    count = 1;
     t_count = 1;
     for (int i = 1; i < N; i++) {
         if (arr[i] != arr[i-1]) {
             if (t_count > count) {
                 count = t_count;
                 t_count = 1;
+            } else {
+                t_count = 0;
             }
         } else {
             t_count ++;
