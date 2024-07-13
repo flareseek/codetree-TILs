@@ -17,6 +17,7 @@ int main() {
             count = 1;
         }
     }
+    if (result < count) result = count;
     std::cout << result;
     return 0;
 }
