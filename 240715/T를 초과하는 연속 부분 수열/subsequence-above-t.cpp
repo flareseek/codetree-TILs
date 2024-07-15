@@ -9,10 +9,8 @@ int main() {
         if (t < d) {
             temp ++;
         } else {
-            if (count < temp) {
-                count = temp;
-                temp = 0;
-            }
+            if (count < temp) count = temp;
+            temp = 0;
         }
     }
     if (count < temp) {
