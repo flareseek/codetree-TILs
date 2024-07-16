@@ -2,8 +2,10 @@
 
 int main() {
     int N, M;
-    int A[1000001] = {0};
-    int B[1000001] = {0};
+    int A[1000001] = {-1};
+    int B[1000001] = {-1};
+    A[0] = 0;
+    B[0] = 0;
     std::cin >> N >> M;
 
     int index = 1;
@@ -34,7 +36,8 @@ int main() {
     }
     for (int i = 1; i < 1000001; i++) {
         if (A[i] == B[i]) {
-            std::cout << i;
+            if (A[i] == -1) std::cout << -1;
+            else std::cout << i;
             return 0;
         }
     }
