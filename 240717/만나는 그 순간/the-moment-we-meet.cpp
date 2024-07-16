@@ -37,7 +37,7 @@ int main() {
     }
     for (int i = 1; i < 1000001; i++) {
         if (A[i] == B[i]) {
-            if (last < index) std::cout << -1;
+            if (last < i) std::cout << -1;
             else std::cout << i;
             return 0;
         }
