@@ -13,5 +13,6 @@ int main() {
             return 0;
         }
     }
+    std::cout << -1;
     return 0;
 }
