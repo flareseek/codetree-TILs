@@ -24,24 +24,21 @@ int main() {
         }
     }
     
-    bool crs = false;
-    int cnt = 0;
     int p = 0; // 1: a, 2: b
+    int cnt = 0;
     for (int i = 0; i < a_index; i++) {
-        if (a_field[i] == b_field[i]) crs = true;
-        else if (crs) {
-            if (p == 1 && b_field[i] > a_field[i]) {
-                cnt ++;
-                p = 2;
-            }
-            else if (p == 2 && a_field[i] > b_field[i]) {
-                cnt ++;
-                p = 1;
-            } else if (p == 0) {
-                if (b_field[i] > a_field[i]) p = 2;
-                else p = 1;
-            }
-            crs = false;
+        if (a_field[i] == b_field[i]) continue;
+        else if (p == 0) {
+            if (a_field[i] > b_field[i]) p = 1;
+            else p = 2;
+        }
+        else if (p == 2 && a_field[i] > b_field[i]) {
+            cnt ++;
+            p = 1;
+        }
+        else if (p == 1 && a_field[i] < b_field[i]) {
+            cnt ++;
+            p = 2;
         }
     }
     std::cout << cnt;
