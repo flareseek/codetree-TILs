@@ -26,15 +26,17 @@ int main() {
 
     int aIndex = 0;
     int bIndex = 0;
+    int aPrev = 0;
+    int bPrev = 0;
     int aSize = aVector.size();
     int bSize = bVector.size();
     int count = 0;
     int i = 1;
     while(true) {
         aIndex = i < aSize ? i : (aSize - 1);
-        int aPrev = aIndex == 0 ? aIndex : (aIndex - 1);
         bIndex = i < bSize ? i : (bSize - 1);
-        int bPrev = bIndex == 0 ? bIndex : (bIndex - 1);
+        aPrev = i >= aSize ? aIndex : aIndex - 1;
+        bPrev = i >= bSize ? bIndex : bIndex - 1;
        
         if (aVector[aPrev] != bVector[bPrev] && aVector[aIndex] == bVector[bIndex]) count ++;
         if (aIndex == (aSize-1) && bIndex == (bSize-1)) break;
